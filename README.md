@@ -1,47 +1,50 @@
-# 📍 Consulta de CEP com Blazor WebAssembly
+# 📮 BlazzorWasmViaCep
 
-Aplicação web desenvolvida em C# utilizando Blazor WebAssembly para consulta de endereços em tempo real através da API ViaCEP.
+Aplicação web desenvolvida com **Blazor WebAssembly (.NET 8)** para consulta de endereços a partir do CEP, utilizando a API pública [ViaCEP](https://viacep.com.br/).
 
----
+## 🔗 Demo
 
-## 🚀 Tecnologias utilizadas
+[https://DevJoaoL.github.io/blazzor-viacep/](https://DevJoaoL.github.io/blazzor-viacep/)
 
-- C#
-- Blazor WebAssembly
-- HTML5
-- CSS3
-- API ViaCEP
+## ✨ Funcionalidades
 
----
+- Consulta de endereço por CEP em tempo real
+- Exibição de rua, bairro, cidade, região, UF e DDD
+- Validação de CEP (somente números, 8 dígitos)
+- Tratamento de erros de conexão e CEP inválido
 
-## ⚙️ Funcionalidades
+## 🛠️ Tecnologias
 
-- 🔍 Consulta de CEP
-- 🌐 Consumo de API REST
-- 📦 Manipulação de dados em JSON
-- 📄 Exibição de endereço completo
+- [Blazor WebAssembly](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) — .NET 8
+- [ViaCEP API](https://viacep.com.br/) — API pública de consulta de CEPs
+- Bootstrap 5 — estilização
 
----
+## 🚀 Como rodar localmente
 
-## 🧠 Objetivo do projeto
-
-Este projeto foi desenvolvido com o objetivo de praticar:
-
-- Consumo de APIs externas
-- Desenvolvimento front-end com Blazor
-- Manipulação de requisições HTTP
-- Tratamento de dados em aplicações web
-
----
-
-## ▶️ Como executar o projeto
+**Pré-requisito:** [.NET 8 SDK](https://dotnet.microsoft.com/download)
 
 ```bash
-# Clone o repositório
-git clone https://github.com/DevJoaoL/BlazzorWasmViaCep
-
-# Acesse a pasta
-cd BlazzorWasmViaCep
-
-# Execute o projeto
+git clone https://github.com/DevJoaoL/blazzor-viacep.git
+cd blazzor-viacep/BlazzorWasmViaCep
 dotnet run
+```
+
+Acesse `http://localhost:5000` no navegador.
+
+## 📁 Estrutura do projeto
+
+```
+BlazzorWasmViaCep/
+├── Pages/
+│   └── Home.razor        # Página principal com a consulta de CEP
+├── Models/
+│   └── Endereco.cs       # Model com os campos retornados pela API
+├── Layout/
+│   └── MainLayout.razor  # Layout base da aplicação
+└── wwwroot/
+    └── index.html        # Entry point da aplicação
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
